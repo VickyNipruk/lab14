@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="css/style.css" rel="stylesheet">
+        <title>Завдання 1</title>
+    </head>
+    <body>
+        <h1>Значення масивів:</h1>
+        <div style="color: rgb(36, 23, 2); font-size: 25px;">
+            <script>
+                const randomArray = [];
+                for (let i = 0; i < 15; i++) {
+                    randomArray.push(Math.floor(Math.random() * 100)); 
+                }
+                document.write("<b>Масив рандомних 15 чисел: </b>" + randomArray.join("&nbsp;&nbsp;") + "<br><br>");
+
+                const A = 56; 
+
+                let dobutok = 1;
+                for (let i = 0; i < randomArray.length; i++) {
+                    if (i % 4 === 3) {
+                        dobutok = dobutok * randomArray[i];
+                    }
+                }
+
+                let countLessThanA = 0;
+                for (let num of randomArray) {
+                    if (num <= A) {
+                        countLessThanA++;
+                    }
+                }
+
+                document.write("<br><b>Результат:</b><br>");
+                document.write("Добуток чисел на місцях, кратних 4: " + dobutok + "<br>");
+                document.write("Кількість чисел, не більше за A (" + A + "): " + countLessThanA);
+            </script>
+        </div>
+
+        <div class="return" style="margin-top: 20px;">
+            <a href="index.html" class="button">Повернутись на головну</a>
+        </div>
+    </body>
+</html>

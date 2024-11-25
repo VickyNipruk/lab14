@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="css/style.css" rel="stylesheet">
+        <title>Завдання 1</title>
+    </head>
+    <body>
+        <h1>Значення масивів:</h1>
+        <div style="color: rgb(0, 62, 52); font-size: 25px;">
+            <script>
+                const treag = [];
+                for (let n = 1; n <= 10; n++) {
+                    treag.push(n * (n + 1) / 2); 
+                }
+                document.write("<b>Масив трикутних чисел:</b> " + treag.join("&nbsp;&nbsp;") + "<br><br>");
+    
+                const kvd = [];
+                for (let n = 1; n <= 10; n++) {
+                    kvd.push(n * n); 
+                }
+                document.write("<b>Масив квадратів чисел:</b> " + kvd.join("&nbsp;&nbsp;") + "<br><br>");
+    
+                const rez = treag.concat(kvd); 
+                document.write("<b>Об'єднані масиви:</b> " + rez.join("&nbsp;&nbsp;")+"<br>");
+
+                const rezs = rez.sort((a, b) => b - a); 
+                document.write("<br><b>Відсортований масив:</b> " + rezs.join("&nbsp;&nbsp;")+ "</br>"); // Виводимо результат</script>
+        </div>
+
+        <div class="return">
+            <a href="index.html" class="button">Повернутись на головну</a>
+        </div>
+    </body>
+</html>

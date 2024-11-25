@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="css/style.css" rel="stylesheet">
+        <title>Завдання 2</title>
+    </head>
+    <body>
+        <h1>Створити масив. Знайти мінімальний елемент та поміняти його місцями з наступним елементом масиву.</h1>
+       <div style="color: rgb(197, 109, 2); font-size: 30px;">
+        <script>
+            const randomArray = [];
+               for (let i = 0; i < 15; i++) {
+                   randomArray.push(Math.floor(Math.random() * 100)); 
+               }
+               document.write("<b>Масив рандомних 15 чисел: </b>" + randomArray.join("&nbsp;&nbsp;")+"<br>");
+   
+               let min = 0;
+               for (let i=0; i<randomArray.length; i++){
+                   if (randomArray[i]<randomArray[min])
+                   min = i;
+               }
+   
+               if (min < randomArray.length - 1) { 
+                   let temp = randomArray[min];
+                   randomArray[min] = randomArray[min + 1];
+                   randomArray[min + 1] = temp;
+               }
+               document.write("<br><b>Масив після заміни:</b> " + randomArray.join("&nbsp;&nbsp;"));
+          </script>
+       </div>
+
+        <div class="return">
+            <a href="index.html" class="button">Повернутись на головну</a>
+        </div>
+    </body>
+</html>

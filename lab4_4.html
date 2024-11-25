@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="css/style.css" rel="stylesheet">
+        <title>Завдання 4</title>
+    </head>
+    <body>
+        <h1>Виконання завдання 4:</h1>
+        <div style="color: rgb(1, 81, 33); font-size: 25px; text-align: left;">
+            <script>
+                const fruits = ['apple', 'pineapple', 'mango', 'melon', 'grape'];
+                const citrus = ['orange', 'lemon', 'lime'];
+                document.write("<b>Фрукти: </b>" + fruits.join(", ") + "<br>");
+                document.write("<b>Цитруси: </b>" + citrus.join(", ") + "<br>");
+
+                const combined = fruits.concat(citrus);
+                document.write("<b>Об'єднані масиви: </b>" + combined.join(", ") + "<br>");
+
+                const fruitsWithNewItems = [...fruits]; 
+                let index = fruitsWithNewItems.indexOf('mango') + 1;
+                fruitsWithNewItems.splice(index, 0, 'pear', 'cherry', 'plum', 'raspberry', 'strawberry');
+                document.write("<b>Масив після вставки нових елементів: </b>" + fruitsWithNewItems.join(", ") + "<br>");
+
+                const fruitsAfterRemoval = [...fruits];
+                fruitsAfterRemoval.splice(-3);
+                document.write("<b>Масив після видалення останніх 3 елементів: </b>" + fruitsAfterRemoval.join(", ") + "<br>");
+
+                const sortedFruits = [...fruits]; 
+                document.write("<b>Відсортований масив: </b>" + sortedFruits.sort().join(", ") + "<br>");
+
+                const reverseSortedFruits = [...fruits]; 
+                document.write("<b>Відсортований масив у зворотному порядку: </b>" + reverseSortedFruits.sort().reverse().join(", ") + "<br>");
+
+                const fruitsSortedByLength = [...fruits]; 
+                document.write("<b>Масив, відсортований за довжиною слів: </b>" + fruitsSortedByLength.sort((a, b) => a.length - b.length).join(", ") + "<br>");
+            </script>
+        </div>
+
+        <div class="return" style="margin-top: 20px;">
+            <a href="index.html" class="button">Повернутись на головну</a>
+        </div>
+    </body>
+</html>
